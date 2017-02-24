@@ -1,0 +1,324 @@
+/* Linked Open Graph
+   Copyright (C) 2017 DISIT Lab http://www.disit.org - University of Florence
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU Affero General Public License as
+   published by the Free Software Foundation, either version 3 of the
+   License, or (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Affero General Public License for more details.
+
+   You should have received a copy of the GNU Affero General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+
+@CHARSET "UTF-8";
+
+nav#hooch_sparql_left_side_nav{
+	display: block;
+  	float: left;
+  	position: absolute;
+  	left: 0px;
+    top: 55px;
+    margin: 5px;
+}
+
+nav#hooch_sparql_left_side_nav img{
+	height: 42px;
+	width: 42px;
+	border: 2px solid lightslategrey;
+    border-radius: 10px;
+    background-color: #eeeeee;
+}
+/*
+nav#hooch_sparql_left_side_nav img:hover{
+	height: 42px;
+	width: 42px;
+	border: 2px solid lightslategrey;
+    border-radius: 10px;
+    background-color: #0000ff;
+}
+*/
+nav#hooch_sparql_left_side_nav > ul{
+	margin: 0;
+    padding: 0;
+	list-style-type: none;
+}
+/*
+nav#hooch_sparql_left_side_nav > ul > li > ul{
+	display: none;
+	position: absolute;
+	left: 15px;
+    top: 0px;
+	list-style-type: none;
+}
+
+nav#hooch_sparql_left_side_nav > ul > li:hover > ul{
+	display: block;
+	height: auto;
+}
+
+nav#hooch_sparql_left_side_nav > ul > li > ul > li{
+	clear: both;
+	border-style: none;
+}
+*/
+#hooch_sparql_navigation_patRes {			
+	background:Silver;
+	width: 78px; 
+	height:auto;
+	position: absolute;
+	display:none; 
+	background-clip:none;
+	z-index:1000;
+}
+body.firefox  #hooch_sparql_navigation_patRes{
+	/* height:180px; */
+	height:auto;
+}
+
+#hooch_sparql_navigation_patResMenu {			
+	background:Silver;
+	width: 78px; 
+	height:auto;
+	position: absolute;
+	display:none; 
+	background-clip:none;
+	z-index:1000;
+}
+body.firefox  #hooch_sparql_navigation_patResMenu{
+	/* height:180px; */
+	height:auto;
+}
+
+button.sparql_patres_button{
+	cursor: pointer;
+	height: 20px;
+	width: 100%;
+	text-shadow: 1px 1px 1px #000;
+}
+body.firefox button.sparql_patres_button{
+	margin-bottom: -2.9px;
+	height: 15.7%;
+}
+
+
+#hooch_sparql_navigation_patLink {			
+	background:Silver;
+	width: 78px; 
+	height:auto;
+	position: absolute;
+	display:none; 
+	background-clip:none;
+	z-index:1000;
+}
+body.firefox  #hooch_sparql_navigation_patLink{
+	/* height:180px; */
+	height:auto;
+}
+
+#hooch_sparql_navigation_istRes {			
+	background:Silver;
+	width: 78px; 
+	height:auto;
+	position: absolute;
+	display:none; 
+	background-clip:none;
+	z-index:1000;
+}
+body.firefox  #hooch_sparql_navigation_istRes{
+	/* height:180px; */
+	height:auto;
+}
+
+#hooch_sparql_navigation_svgLinkLineRem {			
+	background:Silver;
+	width: 78px; 
+	height:auto;
+	position: absolute;
+	display:none; 
+	background-clip:none;
+	z-index:1000;
+}
+body.firefox  #hooch_sparql_navigation_svgLinkLineRem{
+	/* height:180px; */
+	height:auto;
+}
+
+
+
+/* MODAL HERE */
+
+
+#sparqlFilterOverlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index:8;
+}
+
+.sparqlHoochOverlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index:8;
+}
+
+
+
+#loadOverlay {
+   	position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index:8;
+}
+
+#loadingImage {
+    width: 50px;
+    height: 57px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -28px 0 0 -25px;
+}
+
+#sparqlFilterPromptContent{
+	border-radius:8px;
+    background:#fff;
+    padding:20px;
+    height:300px;
+}
+
+#sparqlFilterPrompt{
+    position:absolute;
+    /*background:url(tint20.png) 0 0 repeat;*/
+    background:rgba(0,0,0,0.2);
+    border-radius:14px;
+    padding:8px;
+    z-index:8;
+}
+
+#sparqlFilterPrompt * {
+    z-index:8;
+}
+
+#sparqlFilterPromptClose {
+    position:absolute;
+    /*background:url(images/buttons/X_icon.png) 0 0 no-repeat;*/
+    width:24px;
+    height:27px;
+    display:block;
+    /*text-indent:-9999px;*/
+    top:-7px;
+    right:-7px;
+}
+
+#sparqlQueryPromptContent{
+	border-radius:8px;
+    background:#fff;
+    padding:20px;
+    height:300px;
+    z-index:8;
+    position:absolute;
+}
+
+#sparqlQueryPromptContent * {
+    z-index:8;
+}
+
+
+#sparqlQueryManager{
+    position:absolute;
+    /*background:url(tint20.png) 0 0 repeat;*/
+    background:rgba(0,0,0,0.2);
+    border-radius:14px;
+    padding:8px;
+}
+
+#sparqlQueryPromptClose {
+    position:absolute;
+    /*background:url(images/buttons/X_icon.png) 0 0 no-repeat;*/
+    width:24px;
+    height:27px;
+    display:block;
+    /*text-indent:-9999px;*/
+    top:-7px;
+    right:-7px;
+    z-index:8;
+}
+
+div#hoochFiltersTableWrapper {
+	overflow-y: scroll;
+    max-height:150px;
+    height:150px;
+}
+
+.hoochSparqlTableWrapper {
+	overflow-y: scroll;
+    max-height:250px;
+    height:250px;
+}
+
+.hoochSparqlTableCellInner {
+  height: 20px;
+  max-height: 20px;
+  overflow: hidden;
+}
+
+
+.hoochSparqlTable {
+	width: 600px;
+    height: 250px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout:fixed;
+}
+
+
+
+table#hoochFiltersTable {
+	width: 600px;
+    height: 250px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout:fixed;
+}
+/*
+table#hoochFiltersTable > tbody > th, table#hoochFiltersTable > tbody > td {
+	border: 1px solid black;
+	 
+}*/
+
+table#hoochFiltersTable > tbody > tr {
+	padding: 5px;
+    text-align: center;
+    height: 30px;
+    border-width: 1px 0;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.filteredImage{
+	
+}
+
+
